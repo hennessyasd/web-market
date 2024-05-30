@@ -1,0 +1,49 @@
+.game-page-container{
+    .upper-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        background: linear-gradient(#212121, #212121) padding-box,
+        linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+        border: 2px solid transparent;
+        padding: 22px;
+        font-size: 14px;
+        display: flex;
+        border-radius: 16px;
+        background-size: 200% 100%;
+        animation: gradient 5s ease infinite;
+        margin: 1vw;
+        .img-container{
+            .img{
+                background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            border-radius: 16px;
+            background-size: 200% 100%;
+            animation: gradient 5s ease infinite;
+            border-radius: 5%;
+            border: 2px solid transparent;
+            width: 400px;
+            height: 400px;   
+            }   
+        }
+    }
+    .footer-container{
+        margin: 1vw;
+        flex-direction: column;
+    }
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }

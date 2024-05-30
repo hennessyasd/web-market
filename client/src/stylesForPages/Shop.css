@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    position: relative;
+    padding: 0 2vw 0 2vw;
+    z-index: 2;
+    .bars{
+        .type-bar{
+            margin: 0 0 0 1vw;
+        }
+        .genre-bar{
+            margin: 0 0 0 1vw;
+        }
+    }
+}

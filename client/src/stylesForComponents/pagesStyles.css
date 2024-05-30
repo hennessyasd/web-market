@@ -1,0 +1,31 @@
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline;
+    color: #fff;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  .active {
+    background-color: magenta;
+    color: white;
+    border: 1px solid magenta;
+  }
+  li:hover:not(.active) {
+    background-color: #ddd;
+  }
+}

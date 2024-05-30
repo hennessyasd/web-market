@@ -1,0 +1,28 @@
+.list-container{
+    display: flex;
+        width: 100%;
+        padding: 1vw 0 1vw 5vw;
+        margin: 3vw;
+        position: relative;
+        z-index: 2;
+
+    .list-of-games{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        opacity: 1;
+    }
+    .list-of-games::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #171817;
+        border-radius: 2%;
+        opacity: 0.4; 
+        z-index: 1;
+        pointer-events: none; 
+    }
+}

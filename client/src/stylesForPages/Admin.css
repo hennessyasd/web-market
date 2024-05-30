@@ -1,0 +1,14 @@
+.admin-page-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24.7vw;
+
+    .admin-buttons{
+        display: flex;
+        flex-direction: column;
+        margin: 1vw;
+        .b-a{
+            margin-bottom: 1vw;
+        }
+    }
+}

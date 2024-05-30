@@ -1,0 +1,33 @@
+.container{
+    border-radius: 80px;
+    margin: 1vw;
+    position: relative;
+    padding: 0 0vw 0 4vw;
+    z-index: 2;
+
+    .card{
+        background-color: #1f211e;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        
+        .info{
+            display: flex;
+            justify-content: center;
+            margin: 0.5vw;
+
+            .svg{
+                border-radius: 50%;
+                margin-left: 6px;
+                height: 30px;
+                width: 30px;
+                background-color: magenta;
+            }
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            border-top-left-radius: 40px;
+         }
+    }
+}
