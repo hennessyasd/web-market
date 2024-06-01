@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import user from "../assets/user.png";
 import "../stylesForPages/GamePage.css";
 import { useParams } from "react-router-dom";
@@ -14,7 +14,7 @@ const GamePage = () => {
 
     return (
         <div className="game-page-container">
-            <div class="upper-container">
+            <div className="upper-container">
                 <div className="img-container">
                 <img className="img" src={`${import.meta.env.VITE_API_URL}${game.img}`} alt={game.name} />
                 </div>
@@ -29,9 +29,9 @@ const GamePage = () => {
                     <button>Добавить в корзину</button>
                 </div>
             </div>
-            <div class="footer-container">
+            <div className="footer-container">
                 <h1>Описание:</h1>
-                <ul class="description">
+                <ul className="description">
                     {game.info.map((info, index) => 
                         <li 
                         key={info.id}

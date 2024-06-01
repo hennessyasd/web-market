@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './components/AppRouter';
@@ -22,7 +22,7 @@ const App = observer(() => {
   }, [])
 
   if(loading) {
-    return <div class="loader" style={{margin: 'auto', position: 'relative', top: '20vw'}}></div>
+    return <div className="loader" style={{margin: 'auto', position: 'relative', top: '20vw'}}></div>
   }
 
   return (

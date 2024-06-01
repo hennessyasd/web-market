@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../stylesForPages/Admin.css";
 import CreateType from "../components/windows/CreateType"; 
 import CreateGenre from "../components/windows/CreateGenre";

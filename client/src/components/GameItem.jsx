@@ -1,4 +1,3 @@
-import React from "react";
 import user from "../assets/user.png";
 import "../stylesForComponents/gameitemStyles.css";
 import { useNavigate } from "react-router-dom";

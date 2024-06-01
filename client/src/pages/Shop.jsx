@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import TypeBar from "../components/TypeBar";
 import GenreBar from "../components/GenreBar";
 import Pages from "../components/Pages";

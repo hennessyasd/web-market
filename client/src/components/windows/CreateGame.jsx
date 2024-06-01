@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../../main";
 import "../../stylesForComponents/stylesForWindows/modal.css"
 import { observer } from "mobx-react-lite";
@@ -46,7 +46,7 @@ const CreateGame = observer((props) => {
         formData.append('genreId', game.selectedGenre.id);
         formData.append('typeId', game.selectedType.id);
         formData.append('info', JSON.stringify(info));
-        createGame(formData).then(data => onHide());
+        createGame(formData).then(() => onHide());
         onHide()
     };
 
@@ -60,7 +60,7 @@ const CreateGame = observer((props) => {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <div className="dropdown-container mt-2 mb-2">
+                    <div className="dropdown-container">
                         <select className="dropdown-select" onChange={(e) => game.setSelectedType(game.types.find(type => type.id == e.target.value))}>
                             <option value="" disabled selected>{game.selectedType.name || "Выберите тип"}</option>
                             {game.types.map(type => (
@@ -70,7 +70,7 @@ const CreateGame = observer((props) => {
                             ))}
                         </select>
                     </div>
-                    <div className="dropdown-container mt-2 mb-2">
+                    <div className="dropdown-container">
                         <select className="dropdown-select" onChange={(e) => game.setSelectedGenre(game.genres.find(genre => genre.id == e.target.value))}>
                             <option value="" disabled selected>{game.selectedGenre.name || "Выберите жанр"}</option>
                             {game.genres.map(genre => (
@@ -80,15 +80,15 @@ const CreateGame = observer((props) => {
                             ))}
                         </select>
                     </div>
-                    <div className="form">
+                    <div className="form" style={{margin: '1vw'}}>
                         <input className="input" placeholder="Введите название" required type="text" value={name} onChange={(e) => setName(e.target.value)} />
                         <span className="input-border"></span>
                     </div>
-                    <div className="form">
+                    <div className="form" style={{margin: '1vw'}}>
                         <input className="input" placeholder="Введите стоимость" required type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} />
                         <span className="input-border"></span>
                     </div>
-                    <div className="form">
+                    <div className="form" style={{margin: '1vw'}}>
                         <input className="input" required type="file" onChange={selectFile} />
                         <span className="input-border"></span>
                     </div>

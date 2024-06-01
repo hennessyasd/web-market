@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Context } from "../main";
 import '../stylesForComponents/navbarStyles.css';
 import { observer } from "mobx-react-lite";
@@ -15,10 +15,10 @@ const NavBar = observer(() => {
     }
 
     return (
-        <div class="navbar-Block">
+        <div className="navbar-Block">
             {user.isAuth ? 
             <ul className="navbar-loged">
-                <div class="logo">
+                <div className="logo">
                     <h1
                     className="logo"
                     onClick={()=> navigate(SHOP_ROUTE)}
@@ -29,7 +29,7 @@ const NavBar = observer(() => {
             </ul>
             :
             <ul className="navbar-unloged">
-                <div class="logo">
+                <div className="logo">
                     <h1
                     onClick={()=> navigate(SHOP_ROUTE)}
                     >KROLIK SHOP</h1>
