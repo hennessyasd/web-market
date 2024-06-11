@@ -28,7 +28,7 @@ class GameController {
                     })
                 );
             }
-            // Убедитесь, что возвращается вся игра, включая свойства
+            // Убеждаемся, что возвращается вся игра, включая свойства
             const fullGame = await Game.findOne({ where: { id: game.id }, include: GameInfo });
             return res.json(fullGame);
         } catch (e) {

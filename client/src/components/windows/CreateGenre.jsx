@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../stylesForComponents/stylesForWindows/modal.css"
 import { createGenre } from "../../http/gameAPI";
 
@@ -7,7 +7,7 @@ const CreateGenre = (props) => {
     const [ value, setValue ] = useState('')
     
     const addGenre = () => {
-        createGenre({name: value}).then(data => setValue(''))
+        createGenre({name: value}).then(() => setValue(''))
         onHide()
     }
 
@@ -24,10 +24,10 @@ const CreateGenre = (props) => {
                     </button>
                 </div>
                 <div className="modal-body">
-                <div class="form">
-                        <input class="input" placeholder="Введите жанр" required="" type="text" value={value} onChange={e => setValue(e.target.value)}/>
-                        <span class="input-border"></span>
-                    </div>
+                <div className="form">
+                        <input className="input" placeholder="Введите жанр" required="" type="text" value={value} onChange={e => setValue(e.target.value)}/>
+                        <span className="input-border"></span>
+                    </div>  
                 </div>
                 <div className="modal-footer">
                     <button type="button" className="btn" onClick={onHide}>

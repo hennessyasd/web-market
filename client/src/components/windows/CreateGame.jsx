@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../../main";
 import "../../stylesForComponents/stylesForWindows/modal.css"
 import { observer } from "mobx-react-lite";
@@ -46,7 +46,7 @@ const CreateGame = observer((props) => {
         formData.append('genreId', game.selectedGenre.id);
         formData.append('typeId', game.selectedType.id);
         formData.append('info', JSON.stringify(info));
-        createGame(formData).then(data => onHide());
+        createGame(formData).then(() => onHide());
         onHide()
     };
 

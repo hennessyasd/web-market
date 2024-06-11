@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../stylesForComponents/stylesForWindows/modal.css"
 import { createType } from "../../http/gameAPI";
 
@@ -7,7 +7,7 @@ const CreateType = (props) => {
     const [ value, setValue ] = useState('')
 
     const addType = () => {
-        createType({name: value}).then(data => setValue(''))
+        createType({name: value}).then(() => setValue(''))
         onHide()
     }
 
@@ -24,9 +24,9 @@ const CreateType = (props) => {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <div class="form">
-                        <input class="input" placeholder="Введите тип" required="" type="text" value={value} onChange={e => setValue(e.target.value)}/>
-                        <span class="input-border"></span>
+                    <div className="form">
+                        <input className="input" placeholder="Введите тип" required="" type="text" value={value} onChange={e => setValue(e.target.value)}/>
+                        <span className="input-border"></span>
                     </div>
                 </div>
                 <div className="modal-footer">

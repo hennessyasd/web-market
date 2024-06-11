@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { observer } from "mobx-react-lite";
 import { Context } from "../main";
 import "../stylesForComponents/typebarStyles.css"
@@ -9,9 +9,9 @@ const TypeBar = observer(() => {
     return (
         <div>
             <h1>Types:</h1>
-            <ul class="list">
+            <ul className="list">
             {game.types.map(type => (
-                <li class="btn"
+                <li className="btn"
                     onClick={() => game.setSelectedType(type)}
                     key={type.id}
                 >
